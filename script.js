@@ -5,11 +5,13 @@
 const startButton = document.getElementById('start')
 const result = document.getElementById('result')
 const wrongSound = document.getElementById('wrong')
+const coins = document.getElementById('coins')
 const numberInput = document.getElementById('numberInput')
 const number = document.getElementById('number')
 const header = document.getElementById('header')
 
 numberInput.addEventListener('input', listen)
+window.addEventListener("keypress", enterStart)
 
 let interval
 let points = 0
@@ -22,6 +24,12 @@ let rightAnswer
 // indicates if computer showing the sequence in this moment
 let active = false
 
+
+function enterStart(e) {
+    if (e.keyCode === 13 || e.keyCode === 32) {
+        setNew()
+    }
+}
 function disableInput(value) {
     numberInput.disabled = value
     numberInput.value = ''
@@ -94,6 +102,7 @@ function listen() {
         if (typedNumber === sequence.join('')) {
             header.textContent = "right"
             disableInput(true)
+            coins.play()
             points++
             setTimeout(function(){
                 start()
