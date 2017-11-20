@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <meta charset="UTF-8">
+    <head>
+
+        <title>memNum</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                background-color: #0f0f0f;
+                color: white;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            #game {
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #panel {
+                display: flex;
+                margin-right: 10vw;
+                flex-direction: column;
+            }
+
+            #result {
+                color: rgb(194, 194, 194);
+                align-self: center;
+                padding-top: 2em;
+            }
+
+            #memNum {
+                display: flex;
+                width: 400px;
+                height: 400px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .input-group {
+                padding-top: 1em;
+            }
+
+            #number {
+                font-size: 30vh;
+                font-family: 'Quattrocento', serif;
+                /* animation: dissapear 2.5s infinite; */
+            }
+
+            @keyframes dissapear {
+                0% {
+                    color: transparent;
+                }
+
+                15% {
+                    color: white;
+                }
+
+
+                80% {
+                    font-size: 30vh;
+                    color: white;
+                }
+
+                100% {
+                    font-size: 60vh;
+                    color: transparent;
+                }
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
+    </head>
+    <body>
+        
+
+        <div id="game">
+            <div id="panel">
+                <h1 id="header">memNum ...</h1>
+                <!-- <button id="start" class="btn btn-success" onclick="setNew()">Start</button> -->
+                <button id="start" class="btn btn-success" onclick="setNew()">Start</button>
+                <div class="input-group">
+                    <span class="input-group-addon" id="numberInputnumberInputnumberInputnumberInputnumberInputnumberInputnumberInput">#</span>
+                    <input id="numberInput" type="text" class="form-control" placeholder="numer" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <span id="result"></span>
+            </div>
+
+            <div id="memNum">
+                    <!-- // TODO << game here  -->
+                    <span id="number"></span>
+            </div>
+        </div>
+
+
+        <audio style="color:#c03d26" id="0" src="sounds/0.wav"></audio>
+        <audio id="1" src="sounds/1.wav"></audio>
+        <audio id="2" src="sounds/2.wav"></audio>
+        <audio id="3" src="sounds/3.wav"></audio>
+        <audio id="wrong" src="sounds/wrong.wav"></audio>
+        <audio id="coins" src="sounds/coins.wav"></audio>
+
+
+        <script src="script.js" defer></script> 
+    </body>
+</html>
