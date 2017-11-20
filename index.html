@@ -54,26 +54,24 @@
             #number {
                 font-size: 30vh;
                 font-family: 'Quattrocento', serif;
-                /* animation: dissapear 2.5s infinite; */
+                
+            }
+
+            .slowAnimation {
+                animation: dissapear 2.5s infinite;
             }
 
             @keyframes dissapear {
                 0% {
+                    font-size: 25vh;
                     color: transparent;
                 }
-
-                15% {
-                    color: white;
-                }
-
-
-                80% {
-                    font-size: 30vh;
-                    color: white;
+                25% {
+                    color: #ffffff11;
                 }
 
                 100% {
-                    font-size: 60vh;
+                    font-size: 35vh;
                     color: transparent;
                 }
             }
@@ -103,7 +101,7 @@
         </div>
 
 
-        <audio style="color:#c03d26" id="0" src="sounds/0.wav"></audio>
+        <audio id="0" src="sounds/0.wav"></audio>
         <audio id="1" src="sounds/1.wav"></audio>
         <audio id="2" src="sounds/2.wav"></audio>
         <audio id="3" src="sounds/3.wav"></audio>

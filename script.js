@@ -55,6 +55,7 @@ function addNext() {
 }
 
 function playSequence() {
+    number.classList.remove('slowAnimation')
     active = true
     let i = 0
 
@@ -71,6 +72,7 @@ function playSequence() {
     play()
     setTimeout(function(){
         show('?')
+        number.classList.add('slowAnimation')
         disableInput(false)
         numberInput.focus()
         header.textContent = 'memNum ...'
