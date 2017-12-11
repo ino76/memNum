@@ -57,15 +57,16 @@ function startBle(value) {
 
 
 function start() {
-    addNext()
+    generateNumber(sequence.length + 1)
     playSequence()
 }
 
-function addNext() {
-    let random = Math.floor(Math.random() * 10)
-    sequence.push(random)
-    // TODO vymazat log
-    console.log(sequence)
+function generateNumber(times) {
+    sequence = []
+    for(let i = 0; i < times; i++) {
+        let random = Math.floor(Math.random() * 10)
+        sequence.push(random)
+    }
 }
 
 function playSequence() {
